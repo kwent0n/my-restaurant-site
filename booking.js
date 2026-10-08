@@ -1,6 +1,6 @@
 // ====== НАЛАШТУВАННЯ ======
 // Вставте адресу вашого Cloudflare Worker (див. SETUP-TELEGRAM.md), напр. 'https://mango-booking.ВАШ-НІК.workers.dev'
-const BOOKING_ENDPOINT = '';
+const BOOKING_ENDPOINT = 'https://restaurant-booking.tielieshovandrey.workers.dev';
 const OPEN = { weekday: 9, weekend: 11 }; // година відкриття
 const LAST = 21;                           // останній початок броні
 const PHONE_TEXT = '093 609 05 08';
