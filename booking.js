@@ -84,7 +84,8 @@ const PHONE_TEXT = '093 609 05 08';
       $('bookOkText').textContent = `${payload.name}, ми отримали вашу заявку на ${dateTxt} о ${payload.time} (гостей: ${payload.guests}). Зателефонуємо на ${f.phone.value.trim()} для підтвердження.`;
       form.hidden = true; ok.hidden = false;
       ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    } catch (_) {
+    } catch (err) {
+      console.error('Бронювання: помилка відправки', err);
       show('Не вдалося надіслати заявку. Спробуйте ще раз або зателефонуйте: ' + PHONE_TEXT);
     } finally { btn.disabled = false; btn.textContent = label; }
   });
